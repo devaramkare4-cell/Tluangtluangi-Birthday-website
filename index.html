@@ -1,0 +1,1392 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dear Tluangtluangi ❤️</title>
+
+<style>
+:root {
+    --pink: #ff5caa;
+    --purple: #b66cff;
+    --dark: #160d27;
+    --white: #fff7fc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* BACKGROUND */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 15% 15%, #792a7040, transparent 35%),
+        radial-gradient(circle at 85% 80%, #6541ad40, transparent 35%),
+        linear-gradient(145deg, #160d27, #28112e, #140e29);
+}
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.heart {
+    position: absolute;
+    bottom: -40px;
+    animation: floatHeart linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatHeart {
+    15% { opacity: .8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* COMMON */
+
+section {
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.container {
+    width: min(950px, 100%);
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    color: #ffb4dc;
+    font-size: clamp(2rem, 6vw, 3.3rem);
+    margin-bottom: 22px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+.subtitle {
+    color: #e6cce7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff8dc7, #d5a4ff, #ffb9dd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.btn {
+    border: 1px solid #ffffff35;
+    border-radius: 50px;
+    padding: 14px 24px;
+    color: white;
+    background: linear-gradient(135deg, #e54e9c, #9751df);
+    box-shadow: 0 8px 30px #c14cbb30;
+    margin: 8px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px #d75bcb55;
+}
+
+.btn.secondary {
+    background: #ffffff12;
+    border: 1px solid #ffffff35;
+}
+
+/* PASSWORD SCREEN */
+
+#lock-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(circle at top, #783a7840, transparent 50%),
+        #160d27;
+}
+
+.lock-card {
+    width: min(440px, 100%);
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #ffffff25;
+    border-radius: 28px;
+    background: #ffffff0b;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 80px #00000035;
+}
+
+.lock-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulse 1.8s infinite;
+}
+
+.lock-card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.lock-card p {
+    color: #e5cde8;
+    margin-bottom: 20px;
+}
+
+#password {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    background: #ffffff0d;
+    color: white;
+    outline: none;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#password:focus {
+    border-color: var(--pink);
+}
+
+#lock-error {
+    color: #ff9dbd;
+    min-height: 25px;
+    margin-top: 10px;
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.12); }
+}
+
+/* MUSIC */
+
+.music-bar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 50;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.music-bar button {
+    border: 1px solid #ffffff35;
+    border-radius: 50px;
+    padding: 10px 15px;
+    color: white;
+    background: #281532e8;
+    backdrop-filter: blur(10px);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-top: 90px;
+    background:
+        radial-gradient(ellipse at center, #913f6e20, transparent 60%);
+}
+
+.hero-inner {
+    max-width: 800px;
+}
+
+.eyebrow {
+    letter-spacing: 5px;
+    font-size: .8rem;
+    color: #e9a8d2;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-heart {
+    font-size: 4rem;
+    display: block;
+    margin: 25px;
+    animation: heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.17); }
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #e7cce5;
+    font-size: 1.08rem;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.time-box {
+    width: 100px;
+    padding: 15px 8px;
+    background: #ffffff0c;
+    border: 1px solid #ffffff22;
+    border-radius: 16px;
+}
+
+.time-box strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #ffb4dc;
+}
+
+.time-box span {
+    font-size: .8rem;
+    color: #d8c3df;
+}
+
+/* LETTER */
+
+.glass-card {
+    padding: 35px;
+    background: #ffffff0b;
+    border: 1px solid #ffffff20;
+    border-radius: 25px;
+    box-shadow: 0 15px 60px #00000015;
+}
+
+.letter {
+    text-align: left;
+    max-width: 750px;
+    margin: 30px auto;
+    color: #f6e6f4;
+}
+
+.letter p {
+    margin: 18px 0;
+}
+
+.signature {
+    text-align: right;
+    color: #ffb4dc;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+}
+
+/* PHOTO SLIDESHOW */
+
+.slideshow {
+    max-width: 600px;
+    margin: 35px auto 20px;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid #ffffff30;
+    background: #ffffff0c;
+    box-shadow: 0 15px 50px #00000035;
+}
+
+.slide-image {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    background: #321b40;
+}
+
+.slide-caption {
+    padding: 18px;
+    color: #ffcae7;
+}
+
+.slide-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.photo-note {
+    font-size: .85rem;
+    color: #cdb9d5;
+    margin-top: 18px;
+}
+
+/* GIFT BOX */
+
+.gift-stage {
+    margin: 40px auto;
+    min-height: 190px;
+    display: grid;
+    place-items: center;
+}
+
+.gift {
+    position: relative;
+    width: 145px;
+    height: 120px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: transform .3s;
+    outline: none;
+}
+
+.gift:hover {
+    transform: scale(1.06);
+}
+
+.gift-base {
+    position: absolute;
+    bottom: 0;
+    width: 145px;
+    height: 90px;
+    background: linear-gradient(135deg, #f45d9b, #a94ce3);
+    border-radius: 8px 8px 15px 15px;
+    box-shadow: 0 12px 35px #d650a540;
+}
+
+.gift-lid {
+    position: absolute;
+    top: 10px;
+    left: -9px;
+    width: 163px;
+    height: 30px;
+    border-radius: 8px;
+    background: #ff8dc7;
+    transform-origin: left bottom;
+    transition: transform .8s;
+    z-index: 2;
+}
+
+.gift-ribbon {
+    position: absolute;
+    left: 58px;
+    bottom: 0;
+    width: 29px;
+    height: 90px;
+    background: #ffe4f2;
+    z-index: 1;
+}
+
+.gift-bow {
+    position: absolute;
+    left: 48px;
+    top: -18px;
+    width: 50px;
+    height: 25px;
+    border: 8px solid #ffe4f2;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.gift.open .gift-lid {
+    transform: translate(-35px, -55px) rotate(-28deg);
+}
+
+.gift.open {
+    animation: giftBounce .5s;
+}
+
+@keyframes giftBounce {
+    50% { transform: translateY(-12px); }
+}
+
+.gift-message {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #ffffff0b;
+    border: 1px solid #ffffff25;
+    border-radius: 20px;
+    animation: appear .8s;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* REASONS */
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.reason {
+    padding: 25px;
+    background: #ffffff0b;
+    border: 1px solid #ffffff1d;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.reason:hover {
+    transform: translateY(-6px);
+    border-color: #ff8dc755;
+}
+
+.reason div {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.reason h3 {
+    color: #ffb4dc;
+    margin-bottom: 10px;
+}
+
+/* FINAL */
+
+.final-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #5b2359, #291340, #47215b);
+}
+
+.final-heart {
+    font-size: 4rem;
+    margin: 20px;
+}
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: #cbb8d5;
+    background: #10091d;
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 65px 17px;
+    }
+
+    .glass-card {
+        padding: 23px 18px;
+    }
+
+    .slide-image {
+        height: 300px;
+    }
+
+    .time-box {
+        width: 75px;
+    }
+
+    .time-box strong {
+        font-size: 1.4rem;
+    }
+
+    .music-bar {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<!-- =====================================
+     1. PASSWORD SCREEN
+     ===================================== -->
+
+<div id="lock-screen">
+    <div class="lock-card">
+
+        <div class="lock-icon">💌</div>
+
+        <p>THIS SURPRISE IS MADE FOR</p>
+
+        <h1 class="gradient-text">Tluangtluangi</h1>
+
+        <p>
+            Your Boyfriend has prepared a little surprise for you.
+            ❤️<br>
+            Enter our secret word to open your gift.
+        </p>
+
+        <form id="password-form">
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter our secret word..."
+                autocomplete="off"
+                required
+            >
+
+            <button class="btn" type="submit">
+                Unlock My Surprise ❤️
+            </button>
+        </form>
+
+        <div id="lock-error" aria-live="polite"></div>
+
+    </div>
+</div>
+
+
+<!-- =====================================
+     2. MUSIC PLAYER
+     ===================================== -->
+
+<div class="music-bar">
+    <button id="music-button" type="button">
+        🎵 Play Music
+    </button>
+</div>
+
+<!--
+  Add a song file named love-song.mp3 to the same folder.
+  Use a song you have permission to use.
+-->
+
+<audio id="music" loop preload="none">
+    <source src="love-song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- =====================================
+     3. HERO
+     ===================================== -->
+
+<section class="hero" id="home">
+    <div class="container hero-inner">
+
+        <div class="eyebrow">A SURPRISE MADE JUST FOR YOU</div>
+
+        <span class="hero-heart">💖</span>
+
+        <h1>
+            Happy Birthday Darling,<br>
+            <span class="gradient-text">Tluangtluangi</span>
+        </h1>
+
+        <p>
+            To ka Bialnu duhtakkk,
+            The girl who makes ordinary moments feel magical,
+            whose smile makes everything brighter, and whose
+            happiness means more than words can ever explain.
+            This little surprise is only for you. ❤️
+        </p>
+
+        <div class="countdown" id="countdown">
+            <div class="time-box">
+                <strong id="days">00</strong>
+                <span>Days</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="hours">00</strong>
+                <span>Hours</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="minutes">00</strong>
+                <span>Minutes</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="seconds">00</strong>
+                <span>Seconds</span>
+            </div>
+        </div>
+
+        <p id="birthday-note">
+            Counting down to your special day — 22 November. 🎂
+        </p>
+
+        <br>
+
+        <button class="btn" onclick="goTo('letter')">
+            Read Your Letter 💌
+        </button>
+
+        <button class="btn secondary" onclick="goTo('gift')">
+            Find Your Gift 🎁
+        </button>
+
+    </div>
+</section>
+
+
+<!-- =====================================
+     4. LOVE LETTER
+     ===================================== -->
+
+<section id="letter">
+    <div class="container">
+
+        <h2>A Letter From My Heart 💌</h2>
+
+        <p class="subtitle">
+            Thank you for choosing me even though i have nothing special. <br>
+            Some feelings are difficult to say out loud,
+            so I wanted to put a little piece of my heart here.
+        </p>
+
+        <div class="glass-card letter">
+
+            <h3 class="gradient-text">My Dearest Tluangtluangi, ❤️</h3>
+
+            <p>
+                Happy Birthday, my beautiful girl. 💗
+            </p>
+
+            <p>
+                Today is all about celebrating you — your smile,
+                your heart, your dreams, and all the little things
+                that make you the wonderful person you are.
+                Thank you for being you and make me the happiest and bring out the best verion of myself. <br>
+                A hmasa berin damna pe che a vawin ni hruai thleng tu che Pathian hnenah lawmthu awm se la, 
+                Vawin ni ang hi tam tak experience nawn zel la lo hlim reng la, i nu leh pa te tan fanu fel tak nu leh pa ti lawm a chawimawitu lo ni zel la,
+                I unau te tan u fel leh entawn tlak,naute duat in lo hmangaih chhunzawm zel la,chhungkaw tana tang kai tak i lo nih chhunzawm zel dawn niaa. <br>
+                I zirna te pawh hlawh tling ngei turin i bei tang tang dawn niaa
+            </p>
+
+            <p>
+                If I could give you one gift beyond anything
+                wrapped in a box, I would give you the chance to
+                see yourself through my eyes. Maybe then you would
+                understand how special you truly are.
+            </p>
+
+            <p>
+                I hope this new year of your life brings you
+                happiness that stays, dreams that come true,
+                strength on difficult days, and countless reasons
+                to smile.
+            </p>
+
+            <p>
+                You don't have to be perfect to be precious.
+                You don't have to be happy every moment to deserve
+                love. I hope you always remember that your feelings
+                matter, your dreams matter, and you matter.
+            </p>
+
+            <p>
+                Whatever beautiful adventures life has waiting
+                for you, I hope you always keep that sparkle in
+                your eyes and that beautiful spirit in your heart.
+            </p>
+
+            <p>
+                Today, tomorrow, and on all the ordinary days
+                in between, I hope you feel appreciated and loved.
+                🫶
+            </p>
+
+            <p>
+                Happy Birthday once again, My Honeybunch Sugar pumpy-umpy-umpkin.
+                You deserve beautiful things, beautiful memories,
+                and a beautiful life.
+            </p>
+
+            <div class="signature">
+                With all my love,
+                Love You sooooooooo muchhhh to the Moon and back<br>
+                Yours, always. ❤️
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================
+     5. PHOTO SLIDESHOW
+     ===================================== -->
+
+<section id="memories">
+    <div class="container">
+
+        <h2>Our Little Memory Lane 📸</h2>
+
+        <p class="subtitle">
+            A few moments, a few memories, and a whole lot of
+            feelings. Add your favorite pictures to make this
+            corner truly ours. 💗
+        </p>
+
+        <div class="slideshow">
+
+            <img
+                class="slide-image"
+                id="slide-image"
+                src="photos/photo1.jpeg"
+                alt="A special memory"
+            >
+
+            <div class="slide-caption" id="slide-caption">
+                Every memory becomes special when it means something to us. ❤️
+            </div>
+
+        </div>
+
+        <div class="slide-controls">
+            <button class="btn secondary" onclick="previousSlide()">
+                ❮ Previous
+            </button>
+
+            <button class="btn" onclick="nextSlide()">
+                Next Memory ❯
+            </button>
+
+            <button class="btn secondary" id="auto-button"
+                    onclick="toggleSlideshow()">
+                ▶ Play Slideshow
+            </button>
+        </div>
+
+        <p class="photo-note">
+            Replace the sample photo paths in the JavaScript
+            with your own pictures.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- =====================================
+     6. INTERACTIVE GIFT BOX
+     ===================================== -->
+
+<section id="gift">
+    <div class="container">
+
+        <h2>A Gift Just For You 🎁</h2>
+
+        <p class="subtitle">
+            There is something hidden inside this little box.
+            Tap the present to open it. 💝
+        </p>
+
+        <div class="gift-stage">
+
+            <div
+                class="gift"
+                id="gift-box"
+                role="button"
+                tabindex="0"
+                aria-label="Open birthday gift"
+                onclick="openGift()"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGift()}"
+            >
+                <div class="gift-lid"></div>
+                <div class="gift-bow"></div>
+                <div class="gift-base"></div>
+                <div class="gift-ribbon"></div>
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="openGift()">
+            Open Your Present 💗
+        </button>
+
+        <div class="gift-message hidden" id="gift-message">
+
+            <h2 style="font-size: 2rem;">
+                Surprise, My Princess! 💖
+            </h2>
+
+            <p>
+                If happiness could be wrapped in a box, I would
+                fill this entire gift with it and send it to you.
+            </p>
+
+            <p>
+                If wishes could become stars, I would fill your
+                entire sky with them.
+                And if you are Star in the Sky
+                I'll be Astrophile.
+            </p>
+
+            <p>
+                And if I could give you one reminder to keep
+                forever, it would be this:
+            </p>
+
+            <h3 class="gradient-text" style="font-size: 1.6rem;">
+                Stealing your heart was my perfect crime. <br>
+                You are special. You are enough. You deserve love. ❤️
+            </h3>
+
+            <p>
+                May your birthday be as lovely as the happiness
+                you bring into this world. 🌷
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================
+     7. LITTLE REASONS
+     ===================================== -->
+
+<section id="reasons">
+    <div class="container">
+
+        <h2>Little Things That Make You Special 🌷</h2>
+
+        <p class="subtitle">
+            Sometimes, the smallest things mean the most.
+        </p>
+
+        <div class="reason-grid">
+
+            <div class="reason">
+                <div>😊</div>
+                <h3>Your Smile</h3>
+                <p>
+                    A little smile that can make an ordinary
+                    day feel brighter. <br>
+                    Nui mawi nu, lo nui zel rawh.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div>🫶</div>
+                <h3>Your Heart</h3>
+                <p>
+                    The kindness and warmth that make you
+                    beautiful inside and out. <br>
+                    I thinglung kha ka ta a ni tawh.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div>🌙</div>
+                <h3>Your Presence</h3>
+                <p>
+                    The comfort of having someone who makes
+                    little moments meaningful. <br>
+                    I bul a awm nuam ka tia ka hlimpui thin che chuvangin ka bulah awm zel la ka duhthusam ber a ni.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div>✨</div>
+                <h3>Your Dreams</h3>
+                <p>
+                    The beautiful future you deserve to build,
+                    one step at a time. <br>
+                    I dream te a hlawhtlin theih nan theihtawpin i lo bei tang tang dawn niaa,<br>
+                    I dream build turah ka tel ve ngei ka beisei.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div>🌸</div>
+                <h3>Your Uniqueness</h3>
+                <p>
+                    Nobody else is exactly like you, and
+                    that is something worth celebrating.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div>💖</div>
+                <h3>Simply You</h3>
+                <p>
+                    Ka thusawi leh engkim min tui pui ve zel thei a,keimah female version i ni emaw tih mai turin,ka comfort zone i nia,aaa ka sawi thiamlo nangmah tawp hi ka duh overrr. <br>
+                    No special explanation needed.
+                    You are special simply because you are you.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================
+     8. FINAL MESSAGE
+     ===================================== -->
+
+<section class="final-section" id="final">
+    <div class="container">
+
+        <div class="final-heart">💗</div>
+
+        <h2 class="gradient-text">
+            Happy Birthday, Nupui Hual!
+        </h2>
+
+        <p class="subtitle">
+            On 22 November,2026, the world gets another reason to
+            celebrate a beautiful soul. But honestly, you deserve
+            to be celebrated on ordinary days too.
+        </p>
+
+        <button class="btn" onclick="finalSurprise()">
+            One Last Surprise ❤️
+        </button>
+
+        <div id="final-message" class="glass-card hidden"
+             style="margin-top: 30px;">
+
+            <h2 style="font-size: 2rem;">
+                You Mean So Much To Me <br>
+                More than words can express. ❤️
+            </h2>
+
+            <p>
+                May your life be full of laughter, peace, success,
+                adventures, and people who appreciate the beautiful
+                person you are.
+            </p>
+
+            <p>
+                I hope you never stop believing in your dreams.
+                I hope you find reasons to smile even on difficult
+                days. And I hope this little website gives you
+                one more happy memory to keep.
+            </p>
+
+            <div class="final-heart">🎂 💖 🫂</div>
+
+            <h2 class="gradient-text">
+                I LOVE YOUUU! ❤️
+            </h2>
+
+            <p>Made with love, especially for you.</p>
+
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p>Created with ❤️ for Tluangtluangi</p>
+    <p>Your special day: 22 November 🎂</p>
+    <p>One little website. A thousand little feelings. 💗</p>
+</footer>
+
+
+<script>
+/* =====================================
+   PERSONAL SETTINGS
+   ===================================== */
+
+// IMPORTANT:
+// Change this to a secret word only she knows.
+// This is a cute entrance screen, NOT secure authentication.
+const SECRET_PASSWORD = "05062026";
+
+// Birthday: 22 November.
+// Change the year here if you want to celebrate a different year.
+const BIRTHDAY_MONTH = 10; // November (JavaScript months start at 0)
+const BIRTHDAY_DAY = 22;
+
+
+/* =====================================
+   1. PASSWORD SCREEN
+   ===================================== */
+
+const lockScreen = document.getElementById("lock-screen");
+const passwordForm = document.getElementById("password-form");
+const passwordInput = document.getElementById("password");
+const lockError = document.getElementById("lock-error");
+
+passwordForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (passwordInput.value.trim().toLowerCase() ===
+        SECRET_PASSWORD.toLowerCase()) {
+
+        lockScreen.classList.add("hidden");
+
+        createHearts(25);
+
+    } else {
+        lockError.textContent =
+            "Oops! That's not our secret word. Try again, beautiful. 💗";
+
+        passwordInput.value = "";
+        passwordInput.focus();
+    }
+});
+
+
+/* =====================================
+   2. NAVIGATION
+   ===================================== */
+
+function goTo(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+/* =====================================
+   3. BACKGROUND MUSIC
+   ===================================== */
+
+const music = document.getElementById("music");
+const musicButton = document.getElementById("music-button");
+
+musicButton.addEventListener("click", async function() {
+
+    if (music.paused) {
+        try {
+            await music.play();
+            musicButton.textContent = "⏸ Pause Music";
+        } catch (error) {
+            musicButton.textContent = "🎵 Check love-song.mp3";
+            alert(
+                "Add a valid love-song.mp3 file to the website folder, " +
+                "then try again."
+            );
+        }
+    } else {
+        music.pause();
+        musicButton.textContent = "🎵 Play Music";
+    }
+});
+
+music.addEventListener("ended", function() {
+    musicButton.textContent = "🎵 Play Music";
+});
+
+
+/* =====================================
+   4. BIRTHDAY COUNTDOWN
+   ===================================== */
+
+function updateCountdown() {
+
+    const now = new Date();
+
+    let target = new Date(
+        now.getFullYear(),
+        BIRTHDAY_MONTH,
+        BIRTHDAY_DAY,
+        0, 0, 0
+    );
+
+    // If the birthday has passed this year, count toward next year.
+    if (now.getTime() > target.getTime() &&
+        now.getFullYear() !== target.getFullYear()) {
+        target.setFullYear(now.getFullYear() + 1);
+    }
+
+    if (now >= target) {
+        target = new Date(
+            now.getFullYear() + 1,
+            BIRTHDAY_MONTH,
+            BIRTHDAY_DAY,
+            0, 0, 0
+        );
+    }
+
+    const difference = target.getTime() - now.getTime();
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+    const note = document.getElementById("birthday-note");
+
+    if (
+        now.getMonth() === BIRTHDAY_MONTH &&
+        now.getDate() === BIRTHDAY_DAY
+    ) {
+        note.textContent =
+            "IT'S YOUR BIRTHDAY, TLUANGTLUANGI! 🎂💖";
+
+        document.getElementById("countdown").classList.add("hidden");
+
+    } else {
+        note.textContent =
+            "Counting down to your special day — 22 November. 🎂";
+
+        document.getElementById("countdown").classList.remove("hidden");
+    }
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+/* =====================================
+   5. PHOTO SLIDESHOW
+   ===================================== */
+
+// Add your own photos to the "photos" folder.
+// Use the exact filenames below, or edit these paths.
+// Captions can be changed to match your real memories.
+
+const slides = [
+    {
+        src: "photos/photo1.jpeg",
+        caption: "One of my favourite picture of you. Always keep that pretty smile for me. ❤️"
+    },
+    {
+        src: "photos/photo2.jpeg",
+        caption: "You're worth keeping forever. 💗"
+    },
+    {
+        src: "photos/photo3.jpeg",
+        caption: "My favorite moments deserve a special place. 🌷"
+    },
+     {
+        src: "photos/photo4.jpeg",
+        caption: "How happy i was on this day. 🌷"
+    },
+    {
+        src: "photos/photo5.jpeg",
+        caption: "Love you to the fullest. KA HMANGAIH CHE MY BIALNU. 🌷"
+    },
+    
+];
+
+let currentSlide = 0;
+let slideshowTimer = null;
+
+const slideImage = document.getElementById("slide-image");
+const slideCaption = document.getElementById("slide-caption");
+
+function showSlide(index) {
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slideImage.style.opacity = "0.2";
+
+    setTimeout(function() {
+
+        slideImage.src = slides[currentSlide].src;
+        slideCaption.textContent = slides[currentSlide].caption;
+
+        slideImage.onload = function() {
+            slideImage.style.opacity = "1";
+        };
+
+        slideImage.onerror = function() {
+            slideImage.style.opacity = "1";
+            slideCaption.textContent =
+                "Add your photo at: " + slides[currentSlide].src;
+        };
+
+    }, 180);
+}
+
+slideImage.style.transition = "opacity .3s";
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function toggleSlideshow() {
+
+    const button = document.getElementById("auto-button");
+
+    if (slideshowTimer) {
+        clearInterval(slideshowTimer);
+        slideshowTimer = null;
+        button.textContent = "▶ Play Slideshow";
+    } else {
+        nextSlide();
+
+        slideshowTimer = setInterval(function() {
+            nextSlide();
+        }, 3500);
+
+        button.textContent = "⏸ Pause Slideshow";
+    }
+}
+
+showSlide(0);
+
+
+/* =====================================
+   6. INTERACTIVE GIFT BOX
+   ===================================== */
+
+let giftOpened = false;
+
+function openGift() {
+
+    const box = document.getElementById("gift-box");
+    const message = document.getElementById("gift-message");
+
+    if (!giftOpened) {
+        box.classList.add("open");
+        message.classList.remove("hidden");
+
+        giftOpened = true;
+
+        createHearts(35);
+
+        setTimeout(function() {
+            message.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 150);
+    } else {
+        message.classList.toggle("hidden");
+    }
+}
+
+
+/* =====================================
+   7. FLOATING HEARTS
+   ===================================== */
+
+const heartsContainer = document.getElementById("hearts");
+
+function createHeart() {
+
+    const heart = document.createElement("span");
+
+    const emojis = ["❤️", "💗", "💕", "💖", "💘", "✨"];
+
+    heart.className = "heart";
+
+    heart.textContent =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (Math.random() * 18 + 14) + "px";
+
+    const duration = Math.random() * 5 + 6;
+
+    heart.style.animationDuration = duration + "s";
+
+    heartsContainer.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, duration * 1000);
+}
+
+setInterval(createHeart, 650);
+
+function createHearts(number) {
+    for (let i = 0; i < number; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+
+/* =====================================
+   8. FINAL SURPRISE
+   ===================================== */
+
+function finalSurprise() {
+
+    const message = document.getElementById("final-message");
+
+    message.classList.remove("hidden");
+
+    createHearts(50);
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+</script>
+
+</body>
+</html>
+```
